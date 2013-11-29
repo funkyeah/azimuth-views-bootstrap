@@ -1,7 +1,7 @@
 <template name="home_page_edit">
   {{#with page}}<div class="container page-edit">
     <div class="row">
-      <div class="span10">
+      <div class="col-md-10">
             <h2>Editing "{{title}}"</h2>
             <form class="form-horizontal" id="pageEditForm">
             {{> page_template_selector }}
@@ -10,8 +10,8 @@
 
     {{! Page specific fields: Feel free to customize these and add/remove}}
     {{formHelper value=metadata type="metadata" label="Metadata" fieldName="metadata" }}
-    {{formHelper value=hero-header type="text" label="Hero Unit Header" fieldName="hero-header" }}
-    {{formHelper value=hero-sub type="wysiwyg" label="Hero Unit Subheading" fieldName="hero-sub" }}
+    {{formHelper value=jumbotron-header type="text" label="Jumbotron Header" fieldName="jumbotron-header" }}
+    {{formHelper value=jumbotron-sub type="wysiwyg" label="Jumbotron Subheading" fieldName="jumbotron-sub" }}
     {{formHelper value=title type="text" label="Title" fieldName="title" }}
     {{formHelper value=contents type="wysiwyg" label="Contents" fieldName="contents" }}
     {{blockZoneEditor zone="body" label="Body Blocks"}}

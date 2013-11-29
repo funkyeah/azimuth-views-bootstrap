@@ -1,7 +1,7 @@
 <template name="four_column_edit">
   <div class="container block-edit">
     <div class="row">
-      <div class="span10">
+      <div class="col-md-10">
         {{#with block}}
           {{formHelper value=tag type="tag" label="Tag" fieldName="tag"}}
           {{formHelper value=contents type="wysiwyg" label="Contents" fieldName="contents" }}

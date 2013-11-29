@@ -1,11 +1,12 @@
 {
   "name": "azimuth-views-bootstrap3",
   "description": "Azimuth CMS frontend templates (using Bootstrap 3.x)",
-  "homepage": "https://github.com/funkyeah/azimuth-views-bootstrap3",
+  "homepage": "https://github.com/funkyeah/azimuth-views-bootstrap",
   "author": "George Kellerman",
   "version": "0.0.1",
-  "git": "https://github.com/funkyeah/azimuth-views-bootstrap3.git",
+  "git": "https://github.com/funkyeah/azimuth-views-bootstrap.git",
   "packages": {
-    "azimuth-core": {}
+    "azimuth-core": {},
+    "bootstrap-3": {}
   }
 }

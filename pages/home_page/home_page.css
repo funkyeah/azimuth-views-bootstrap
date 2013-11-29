@@ -1,4 +1,4 @@
-.hero-unit {
+.jumbotron {
   text-align: center;
   color: #fff;
   background: url("/img/stars.jpg") no-repeat center center fixed;
@@ -8,20 +8,20 @@
     -o-background-size: cover;
 }
 
-.hero-unit a {
+.jumbotron a {
   color: #93cbe8;
 }
 
-.hero-unit .btn {
+.jumbotron .btn {
   margin: 9px;
   color: #fff;
 }
 
-.hero-unit .btn:hover {
+.jumbotron .btn:hover {
   color: #666;
 }
 
-.hero-unit .btn i {
+.jumbotron .btn i {
   line-height: 24px;
   margin-right: 7px;
 }

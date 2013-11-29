@@ -3,7 +3,7 @@
     <label class="control-label" for="contents">{{label}}</label>
     {{#if value}}
       <div class="row">
-        <div class="span6">
+        <div class="col-md-6">
           <table class="table">
             <thead>
               <tr>
@@ -18,7 +18,7 @@
                   <td class="meta-key-existing">{{key}}</td>
                   <td class="meta-value-existing">{{value}}</td>
                   <td>
-                    <a href="#" class="remove-meta-tag"><i class="icon-remove"></i></a>
+                    <a href="#" class="remove-meta-tag"><i class="glyphicon glyphicon-remove"></i></a>
                   </td>
                 </tr>
               {{/each}}
@@ -29,18 +29,18 @@
       <label class="control-label" for="contents"></label>
     {{/if}}
     <div class="row meta-row">
-      <div class="span3">
+      <div class="col-md-3">
         <select name="meta_key" class="meta-key">
           {{#each getMetadataFields}}
             <option value="{{meta_key}}">{{meta_name}}</option>
           {{/each}}
         </select>
       </div>
-      <div class="span3">
+      <div class="col-md-3">
         <input type="text" class="meta-value">
       </div>
-      <div class="span1">
-        <a href="#" class="add-meta-tag"><i class="icon-plus"></i></a>
+      <div class="col-md-1">
+        <a href="#" class="add-meta-tag"><i class="glyphicon glyphicon-plus"></i></a>
       </div>
     </div>
   </div>

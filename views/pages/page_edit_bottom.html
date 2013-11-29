@@ -10,8 +10,8 @@
 
           <div class="control-group">
             <div class="controls">
-              <input id="savePage" type="submit" class="btn" value="Save" />
-              <button id="deletePage" class="btn btn-link pull-right">Delete Page</button>
+              <input id="savePage" type="submit" class="btn btn-success" value="Save" />
+              <button id="deletePage" class="btn btn-danger btn-link pull-right">Delete Page</button>
             </div>
           </div>
         </form>
@@ -19,17 +19,20 @@
     </div>
   </div>
 
-  <div class="azimuth-modal" id="deletePageModal">
-    <div class="modal-header">
-      <h3>Delete Page</h3>
-    </div>
-    <div class="modal-body">
-      <p class="error-text">Are you sure you want to delete this page?  This Action cannot be undone.</p>
-    </div>
-    <div class="modal-footer">
-      <button class="btn close pull-left">Cancel</button>
-      <button class="delete-page btn btn-danger pull-right">Delete</button>
+  <div class="azimuth-modal modal-dialog" id="deletePageModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Delete Page</h3>
+      </div>
+      <div class="modal-body">
+        <p class="error-text">Are you sure you want to delete this page?  This Action cannot be undone.</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-warning close pull-left">Cancel</button>
+        <button class="delete-page btn btn-danger pull-right">Delete</button>
+      </div>
     </div>
   </div>
+
 </template>
 

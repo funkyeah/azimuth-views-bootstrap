@@ -9,13 +9,13 @@
       </div>
     </div>
     <div class="row">
-      <div class="span12">
+      <div class="col-md-12">
         <h3>Files:</h3>
         <ul class='file-list'>
           {{#each files}}
             <li class="file-row">
               <div class="row">
-                <div class="span3">
+                <div class="col-md-3">
                   <a href="{{cfsFileUrl 'default'}}">
                     {{#ifImage filename}}
                       <img src="{{cfsFileUrl 'default'}}">
@@ -24,13 +24,13 @@
                     {{/ifImage}}
                   </a>
                 </div>
-                <div class="span4">
+                <div class="col-md-4">
                   <a href="{{cfsFileUrl 'default'}}">{{filename}}</a>
                   <br />
                   <span class="file-date">{{humanReadableTime uploadDate}}</span>
                   <span class="file-size">{{cfsFormattedSize}}</span>
                 </div>
-                <div class="span3">
+                <div class="col-md-3">
                   <a class="alert button delete-file">Delete</a>
                 </div>
               </div>
@@ -50,14 +50,14 @@
     {{#each files}}
       <li class="file-row" data-link="{{cfsFileUrl 'default'}}">
         <div class="row">
-          <div class="span1 columns">
+          <div class="col-md-1 columns">
             {{#ifImage filename}}
               <img src="{{cfsFileUrl 'default'}}">
             {{else}}
               <img src="/packages/azimuth-core/img/file-large.png">
             {{/ifImage}}
           </div>
-          <div class="span2 columns">
+          <div class="col-md-2 columns">
             {{filename}}
             <br />
             <span class="file-date">{{humanReadableTime uploadDate}}</span>
@@ -76,14 +76,14 @@
     {{#each files}}
       <li class="file-row" data-link="{{cfsFileUrl 'default'}}" data-name="{{filename}}">
         <div class="row">
-          <div class="span1 columns">
+          <div class="col-md-1 columns">
             {{#ifImage filename}}
               <img src="{{cfsFileUrl 'default'}}">
             {{else}}
               <img src="/packages/azimuth-core/img/file-large.png">
             {{/ifImage}}
           </div>
-          <div class="span2 columns">
+          <div class="col-md-2 columns">
             {{filename}}
             <br />
             <span class="file-date">{{humanReadableTime uploadDate}}</span>

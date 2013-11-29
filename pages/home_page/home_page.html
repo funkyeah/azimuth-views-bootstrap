@@ -1,12 +1,12 @@
 <template name="home_page">
 {{#with page}}
-    <div class="hero-unit">
-      <h1>{{hero-header}}</h1>
-      <p>{{{hero-sub}}}</p>
+    <div class="jumbotron">
+      <h1>{{jumbotron-header}}</h1>
+      <p>{{{jumbotron-sub}}}</p>
     </div>
     <div class="container">
       <div class="row">
-        <div class="span12">{{{contents}}}</div>
+        <div class="col-md-12">{{{contents}}}</div>
       </div>
       <div class="row">
         <div class="home-blocks blocks blocks-body">
