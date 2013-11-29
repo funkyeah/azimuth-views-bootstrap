@@ -1,5 +1,4 @@
 <template name="header_nav_root">
-  <ul class="nav">
     {{#each this}}
       {{#if children}}
         <li class="dropdown">
@@ -38,7 +37,6 @@
       {{/if}}
       {{#ifSetting 'showLoginInHeader'}}<div class="mobile-login">{{ loginButtons }}</div>{{/ifSetting}}
     </li>
-  </ul>
 </template>
 
 <template name="header_nav_child">

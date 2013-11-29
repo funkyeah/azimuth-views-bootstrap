@@ -10,44 +10,48 @@
         </button>
         <a class="navbar-brand" href="/">{{#ifSetting "logoUrl"}}<img class="logo" src="{{getSetting 'logoUrl'}}">{{/ifSetting}}{{getSetting 'siteName'}}</a>
       </div>
-      <div class="page-menu nav-collapse collapse">
-        {{#isolate}}
-          {{#with headerNav}}
-            {{>header_nav_root}}
-          {{/with}}
-        {{/isolate}}
+      <nav class="navbar-collapse" role="navigation">
+
+        <ul class="nav navbar-nav">
+          {{#isolate}}
+            {{#with headerNav}}
+              {{>header_nav_root}}
+            {{/with}}
+          {{/isolate}}
+        </ul>
+
+        {{#ifAuthorOrAdmin}}
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-cog"></i> <b class="caret"></b></a>
+              <ul id="adminMenu" class="dropdown-menu">
+                <li class="nav-header">Admin</li>
+                {{#if isInRole 'admin'}}
+                  <li><a href="/site_settings">Site Settings</a></li>
+                  <li><a href="/navigation">Site Navigation</a></li>
+                  <li><a href="/users">Users</a></li>
+                {{/if}}
+                <li><a href="/assets">Asset Library</a></li>
+                <li><a href="/new_page">New Page</a></li>
+                <li class="dropdown-submenu">
+                  <a tabindex="-1">Edit Page</a>
+                  <ul class="dropdown-menu">
+                    {{#each pages}}
+                      <li><a href="/{{slug}}/edit">{{title}}</a></li>
+                    {{/each}}
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        {{/ifAuthorOrAdmin}}
+        {{#ifSetting 'showLoginInHeader'}}
+          <ul class="nav pull-right">
+            <li><a href="/login"><i class="glyphicon glyphicon-user{{#if signedInAs}} logged-in{{/if}}"></i></a></li>
+          </ul>
+        {{/ifSetting}}
       </div>
 
-      {{#ifAuthorOrAdmin}}
-        <ul class="nav pull-right hidden-sm">
-          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-cog"></i> <b class="caret"></b></a>
-            <ul id="adminMenu" class="dropdown-menu">
-              <li class="nav-header">Admin</li>
-              {{#if isInRole 'admin'}}
-                <li><a href="/site_settings">Site Settings</a></li>
-                <li><a href="/navigation">Site Navigation</a></li>
-                <li><a href="/users">Users</a></li>
-              {{/if}}
-              <li><a href="/assets">Asset Library</a></li>
-              <li><a href="/new_page">New Page</a></li>
-              <li class="dropdown-submenu">
-                <a tabindex="-1">Edit Page</a>
-                <ul class="dropdown-menu">
-                  {{#each pages}}
-                    <li><a href="/{{slug}}/edit">{{title}}</a></li>
-                  {{/each}}
-                </ul>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      {{/ifAuthorOrAdmin}}
-      {{#ifSetting 'showLoginInHeader'}}
-        <ul class="nav pull-right">
-          <li><a href="/login"><i class="glyphicon glyphicon-user{{#if signedInAs}} logged-in{{/if}}"></i></a></li>
-        </ul>
-      {{/ifSetting}}
-    </div>
+    </nav>
   </div>
 </template>
